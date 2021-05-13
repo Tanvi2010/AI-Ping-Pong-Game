@@ -42,16 +42,16 @@ function draw(){
    paddleInCanvas();
  
    //left paddle
-   fill(250,0,0);
-    stroke(0,0,250);
+   fill(78, 213, 233);
+    stroke(78, 213, 233);
     strokeWeight(0.5);
    paddle1Y = mouseY; 
    rect(paddle1X,paddle1Y,paddle1,paddle1Height,100);
    
    
     //pc computer paddle
-    fill("#FFA500");
-    stroke("#FFA500");
+    fill(196, 170, 255);
+    stroke(196, 170, 255);
    var paddle2y =ball.y-paddle2Height/2;  rect(paddle2Y,paddle2y,paddle2,paddle2Height,100);
     
     //function midline call
@@ -69,7 +69,7 @@ function draw(){
 
 
 
-//function reset when ball does notcame in the contact of padde
+//function reset when ball does notcame in the contact of paddle
 function reset(){
    ball.x = width/2+100,
    ball.y = height/2+100;
@@ -105,8 +105,8 @@ function drawScore(){
 
 //very important function of this game
 function move(){
-   fill(50,350,0);
-   stroke(255,0,0);
+   fill(249, 129, 167);
+   stroke(249, 129, 167);
    strokeWeight(0.5);
    ellipse(ball.x,ball.y,ball.r,20)
    ball.x = ball.x + ball.dx;
@@ -161,4 +161,8 @@ function paddleInCanvas(){
   if(mouseY < 0){
     mouseY =0;
   }  
+}
+
+function restart() {
+  
 }
