@@ -1,13 +1,17 @@
-.heading{
+.heading {
     background-color: #CCD5FF;
     color: #4ED5E9;
     text-align: left;
     margin-top: 0px;
     text-align: center;
 }
-#footer{
-position: sticky;
 
+#canvas{
+    border: 5px ridge #4ED5E9;
+}
+
+#footer {
+    position: sticky;
     background-color: #CCD5FF;
     color: #F981A7;
     text-align: left;
@@ -15,41 +19,45 @@ position: sticky;
     width: 100%;
     text-align: center;
 }
+
 .heading h2 {
-    display:inline;
+    display: inline;
 }
 
 .heading button {
     float: right;
 }
 
-.playbtn{
+.playbtn {
     width: 10%;
     font-size: 20px;
     font-family: fantasy;
-    background-color: #4ED5E9 ;
+    background-color: #4ED5E9;
 }
-.restartbtn{
+
+.restartbtn {
     width: 10%;
     font-size: 20px;
     font-family: fantasy;
-    background-color: #F981A7 ;
+    background-color: #F981A7;
 }
-#status{
-    background-color:#CCD5FF ;
+
+#status {
+    background-color: #CCD5FF;
     width: 10%;
     font-size: 20px;
     font-family: fantasy;
     color: #F981A7;
     border-radius: 20px;
 }
-video{
+
+video {
     background: url("game_console.png");
     background-size: cover;
     background-position: center;
     padding: 20px;
 }
 
-.modal-dialog{
-width: 80%;
+.modal-dialog {
+    width: 80%;
 }
