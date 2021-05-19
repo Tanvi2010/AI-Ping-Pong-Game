@@ -23,6 +23,9 @@ var ball = {
   dx: 3,
   dy: 3
 }
+rwX="";
+rwY="";
+score="";
 
 function setup() {
   var canvas = createCanvas(700, 600);
@@ -33,6 +36,15 @@ function setup() {
   video.parent('game_console');
   poseNet = ml5.poseNet(video, modelLoaded);
   poseNet.on('pose',gotPoses);
+}
+
+function gotPoses(results) {
+	if (results.length>0) {
+console.log(results);
+rwX=results[0].pose.rightWrist.x;
+rwY=results[0].pose.rightWrist.y;
+score=results[0].pose.rightWrist.score;
+}
 }
 
 function modelLoaded() {
@@ -51,6 +63,12 @@ function draw() {
   fill("black");
   stroke("black");
   rect(0, 0, 20, 700);
+  
+  if (score > 0.2) {
+    fill("#F981A7");
+    stroke("#4ED5E9");
+    circle(rwX,rwY,20);
+  }
 
   //funtion paddleInCanvas call 
   paddleInCanvas();
