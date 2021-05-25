@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-#canvas{
+canvas{
     border: 5px ridge #4ED5E9;
 }
 
@@ -51,12 +51,7 @@
     border-radius: 20px;
 }
 
-video {
-    background: url("game_console.png");
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-}
+
 
 .modal-dialog {
     width: 80%;
